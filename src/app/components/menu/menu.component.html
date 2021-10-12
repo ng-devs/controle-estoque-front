@@ -1,0 +1,12 @@
+<button mat-button>Dashboard</button>
+<button mat-button>Configurações</button>
+<button mat-button [matMenuTriggerFor]="venda">Venda +</button>
+<mat-menu class="vendas" #venda="matMenu" xPosition="after">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+<button mat-button [matMenuTriggerFor]="cadastro">Cadastros</button>
+<mat-menu class="cadastro" #cadastro="matMenu" xPosition="after">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
