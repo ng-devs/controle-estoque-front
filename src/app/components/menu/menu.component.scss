@@ -1,0 +1,32 @@
+::ng-deep .mat-menu-panel {
+  background-color: #7749f8;
+  display: flex;
+  justify-content: center;
+
+  &.cadastro {
+    margin-left: 15px;
+    min-width: 95px !important;
+  }
+  &.vendas {
+    min-width: 85px !important;
+  }
+}
+
+::ng-deep .mat-menu-item {
+  color: white !important;
+  transition: color 0.5s !important;
+
+  &:hover {
+    color: #152536 !important;
+  }
+}
+.mat-button {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  transition: color 0.5s;
+
+  &:hover {
+    color: #152536;
+  }
+}
