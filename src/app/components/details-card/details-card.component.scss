@@ -1,0 +1,43 @@
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.details-card {
+    @extend .flex-center;
+    flex-direction: column;
+    justify-content: start;
+    
+    padding: 0 0 20px;
+    max-width: 260px;
+  
+    & .details-card-toolbar {
+      @extend .flex-center;
+      justify-content: space-between;
+      
+      height: 100%;
+      padding: 7px 20px;
+      margin-bottom: 30px;
+
+      & .toolbar-title {
+        font-size: 16px;
+      }
+      &.toolbar-text {
+        font-size: 11px;
+        font-weight: 400;
+      }
+    }
+  
+    & .details-card-content {
+      @extend .flex-center;
+      flex-direction: column;
+
+      .content-number {
+        font-weight: bold;
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  
