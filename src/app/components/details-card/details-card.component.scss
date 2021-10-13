@@ -12,7 +12,7 @@
     padding: 0 0 20px;
     max-width: 260px;
   
-    & .details-card-toolbar {
+    .details-card-toolbar {
       @extend .flex-center;
       justify-content: space-between;
       
@@ -20,16 +20,16 @@
       padding: 7px 20px;
       margin-bottom: 30px;
 
-      & .toolbar-title {
+    .toolbar-title {
         font-size: 16px;
       }
-      &.toolbar-text {
+    .toolbar-text {
         font-size: 11px;
         font-weight: 400;
       }
     }
   
-    & .details-card-content {
+    .details-card-content {
       @extend .flex-center;
       flex-direction: column;
 
