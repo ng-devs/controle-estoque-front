@@ -1,43 +1,70 @@
-.flex-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-  }
-  
-  .details-card {
-      @extend .flex-center;
-      flex-direction: column;
-      justify-content: start;
-  
-      padding: 0 0 20px;
-      max-width: 260px;
-  
-        .details-card-toolbar {
-        @extend .flex-center;
-        justify-content: space-between;
-  
-        height: 100%;
-        padding: 7px 20px;
-        margin-bottom: 30px;
-  
-        .toolbar-title {
-          font-size: 16px;
-        }
-        .toolbar-text {
-          font-size: 11px;
-          font-weight: 400;
-        }
-      }
-  
-        .details-card-content {
-        @extend .flex-center;
-        flex-direction: column;
-  
-        .content-number {
-          font-weight: bold;
-          font-size: 40px;
-          margin-bottom: 30px;
-        }
-      }
+$card-color-border: #152536;
+$card-color-text: #152536;
+$card-background-color-toolbar: #f8f9fa;
+$font-default: "Inter", sans-serif;
+$line-height-toolbar: 24px;
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-card {
+  @extend .flex-center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 325px;
+  height: 198px;
+
+  border-radius: 4px;
+
+  padding: 0;
+  border: 1px solid $card-color-border;
+
+  .details-card-toolbar {
+    @extend .flex-center;
+    justify-content: space-between;
+
+    width: 323px;
+    height: 46px;
+
+    padding: 11px 23px 12px 35px;
+    border-radius: 4px 4px 0px 0px;
+    background: $card-background-color-toolbar;
+
+    .toolbar-title {
+      color: $card-color-text;
+
+      font-size: 16px;
+      font-weight: 600;
+      line-height: $line-height-toolbar;
+      font-family: $font-default;
     }
-  
+    .toolbar-text {
+      color: $card-color-text;
+
+      font-size: 12px;
+      line-height: $line-height-toolbar;
+      font-family: $font-default;
+    }
+  }
+  .details-card-content {
+    @extend .flex-center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 151px;
+    padding: 29px 0 20px;
+
+    .content-number {
+      font-size: 35px;
+      font-weight: 800;
+      font-family: $font-default;
+
+      line-height: 42px;
+      margin-bottom: 18px;
+    }
+  }
+}
