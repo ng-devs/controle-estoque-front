@@ -1,30 +1,22 @@
-import {
-  AfterViewInit,
-  Component,
-  Input,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { PeriodicElement } from 'src/app/app.component';
+import { ELEMENT_DATA, PeriodicElement } from 'src/app/mocks/table-data.mock';
 
 @Component({
   selector: 'ce-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
 })
-export class TableComponent implements AfterViewInit, OnInit {
-  @Input() ELEMENT_DATA?: Array<PeriodicElement>;
+export class TableComponent<T> implements AfterViewInit {
+  @Input() object!: Array<T>;
   displayedColumns: string[] = ['position', 'name', 'category', 'quantity'];
   dataSource!: MatTableDataSource<PeriodicElement>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  ngOnInit() {
-    this.dataSource = new MatTableDataSource<PeriodicElement>(
-      this.ELEMENT_DATA
-    );
+  constructor() {
+    this.dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   }
 
   ngAfterViewInit() {
