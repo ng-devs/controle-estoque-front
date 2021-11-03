@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="header mat-elevation-z3">
+  <img src="./assets/images/png/logo.png" alt="logo" />
+  <div class="menu-wrapper">
+    <button mat-button>Dashboard</button>
+    <button mat-button>Vendas +</button>
+    <button mat-button [matMenuTriggerFor]="menu">Cadastros ▾</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Categorias</button>
+      <button mat-menu-item>Produtos</button>
+      <button mat-menu-item>Formas de Pagamento</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
