@@ -7,9 +7,10 @@ import { DetailsCardComponent } from './components/details-card/details-card.com
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { ApplyMaterialThemeDirective } from './directives/apply-material-theme.directive';
 
 @NgModule({
-  declarations: [AppComponent, DetailsCardComponent],
+  declarations: [AppComponent, DetailsCardComponent, ApplyMaterialThemeDirective],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
