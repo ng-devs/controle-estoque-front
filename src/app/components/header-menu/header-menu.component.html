@@ -2,12 +2,12 @@
   <img src="./assets/images/png/logo.png" alt="logo" />
   <div class="menu-wrapper">
     <button mat-button>Dashboard</button>
-    <button mat-button>Vendas +</button>
-    <button mat-button [matMenuTriggerFor]="menu">Cadastros ▾</button>
+    <button mat-button>Vendas <mat-icon>add</mat-icon></button>
+    <button mat-button [matMenuTriggerFor]="menu">
+      Cadastros <mat-icon>arrow_drop_down</mat-icon>
+    </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Categorias</button>
-      <button mat-menu-item>Produtos</button>
-      <button mat-menu-item>Formas de Pagamento</button>
+      <button *ngFor="let item of cadItems" mat-menu-item>{{ item }}</button>
     </mat-menu>
   </div>
 </mat-toolbar>
