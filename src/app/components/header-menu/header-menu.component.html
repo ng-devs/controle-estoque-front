@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="header mat-elevation-z3">
+  <img src="./assets/images/png/logo.png" alt="logo" />
+  <div class="menu-wrapper">
+    <button mat-button>Dashboard</button>
+    <button mat-button>Vendas <mat-icon>add</mat-icon></button>
+    <button mat-button [matMenuTriggerFor]="menu">
+      Cadastros <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button *ngFor="let item of cadItems" mat-menu-item>{{ item }}</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
