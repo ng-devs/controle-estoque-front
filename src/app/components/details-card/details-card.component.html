@@ -1,0 +1,18 @@
+<mat-card class="details-card">
+  <mat-toolbar class="details-card-toolbar">
+    <h1 class="toolbar-title">{{ title }}</h1>
+    <span class="toolbar-date">{{ date | date: "M/Y" }}</span>
+  </mat-toolbar>
+  <main class="details-card-content">
+    <p [ceApplyMaterialTheme]="colorName" class="content-number">
+      {{ contentNumber }}
+    </p>
+    <button
+      class="content-button"
+      mat-raised-button
+      [color]="colorName || 'primary'"
+    >
+      Ver detalhes
+    </button>
+  </main>
+</mat-card>
