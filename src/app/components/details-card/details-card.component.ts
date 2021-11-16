@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ColorName } from './../../directives/theme-colors.model';
 
 type CustomDate = number | Date | null | string;
 @Component({
@@ -10,6 +11,5 @@ export class DetailsCardComponent {
   @Input() title?: string;
   @Input() date?: CustomDate;
   @Input() contentNumber?: number;
-  @Input() color!: string;
-  @Input() theme!: string;
+  @Input() colorName?: ColorName;
 }
